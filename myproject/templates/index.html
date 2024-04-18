@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+
+
+<div class="container container-flex">
+<main role="main">
+    
+    
+    <article class="article-featured">
+        <img src="../static/img/life.jpg" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+    </article>
+    {% for x in blog %}
+    
+    <article class="article-recent">
+        <div class="article-recent-main">
+            <h2 class="article-title">{{x.title}}</h2>
+        <p class="article-body">{{x.description}}</p>
+            <a href="find/{{x.id}}" class="article-read-more">CONTINUE READING</a>
+        </div>
+        <div class="article-recent-secondary">
+            <img src="{{x.image.url}}" alt="two dumplings on a wood plate with chopsticks" class="article-image">
+            <p class="article-info">{{x.date}}</p>
+        </div>
+    </article>
+    {% endfor %}
+    
+
+    
+    
+</aside>
+
+</div>
+{% endblock %}

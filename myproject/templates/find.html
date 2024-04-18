@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+
+
+<div class="container container-flex">
+<main role="main">
+    
+
+    
+    <article class="article-recent">
+        <div class="article-recent-main">
+            <h2 class="article-title">{{data.title}}</h2>
+        <p class="article-body">{{data.description}}</p>
+           
+           
+           <a href="/delete/{{data.id}}">
+            <button type="button" class="btn btn-outline-danger">Delete</button></a> 
+
+            <a href="/edit/{{data.id}}">
+            <button type="button" class="btn btn-outline-success">edit</button></a>
+           
+           
+        </div>
+        <div class="article-recent-secondary">
+            <img src="{{data.image.url}}" alt="two dumplings on a wood plate with chopsticks" class="article-image">
+            <p class="article-info">{{data.date}}</p>
+        </div>
+    </article>
+    
+    
+
+    
+    
+</aside>
+
+</div>
+{% endblock %}
